@@ -1,0 +1,23 @@
+{
+  "name": "book-microservice-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Book Microservice",
+  "main": "dev-server.js",
+  "scripts": {
+    "start": "node dev-server.js",
+    "dev": "nodemon dev-server.js",
+    "build": "echo 'Building frontend assets...'",
+    "test": "echo 'Running frontend tests...'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

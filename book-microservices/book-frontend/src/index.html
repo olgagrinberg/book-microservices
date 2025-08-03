@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Microservice Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Book Microservice Dashboard</h1>
+            <p>Manage your book collection with REST API operations</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="total-books">0</div>
+                <div>Total Books</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="available-books">0</div>
+                <div>Available</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="borrowed-books">0</div>
+                <div>Borrowed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="maintenance-books">0</div>
+                <div>Maintenance</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="books-section">
+                <div class="section-header">
+                    <h2 class="section-title">Book Collection</h2>
+                    <button class="btn btn-primary" onclick="refreshBooks()">🔄 Refresh</button>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search books..." id="searchInput">
+                    <button class="btn btn-secondary" onclick="searchBooks()">🔍 Search</button>
+                    <button class="btn btn-secondary" onclick="clearSearch()">Clear</button>
+                </div>
+
+                <div class="book-list" id="bookList">
+                    <!-- Books will be loaded here -->
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="add-book-form">
+                    <div class="section-header">
+                        <h3 class="section-title">Add New Book</h3>
+                    </div>
+                    
+                    <form id="addBookForm" onsubmit="addBook(event)">
+                        <div class="form-group">
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-input" name="title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Author</label>
+                            <input type="text" class="form-input" name="author" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">ISBN</label>
+                            <input type="text" class="form-input" name="isbn">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Genre</label>
+                            <input type="text" class="form-input" name="genre">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Pages</label>
+                            <input type="number" class="form-input" name="pages">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">➕ Add Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/api.js"></script>
+</body>
+</html>

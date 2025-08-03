@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Frontend Dev" type="NodeJSConfigurationType" factoryName="Node.js">
+    <option name="WORKING_DIR" value="$PROJECT_DIR$/book-frontend" />
+    <option name="JAVASCRIPT_FILE" value="dev-server.js" />
+    <option name="APPLICATION_PARAMETERS" value="" />
+    <option name="NODE_PARAMETERS" value="" />
+    <envs>
+      <env name="NODE_ENV" value="development" />
+      <env name="PORT" value="3000" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser start="true" url="http://localhost:3000" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
