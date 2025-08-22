@@ -49,7 +49,9 @@ public class BookController {
             existingBook.setGenre(bookDetails.getGenre());
             existingBook.setPages(bookDetails.getPages());
             existingBook.setStatus(bookDetails.getStatus());
-            
+            existingBook.setDescription(bookDetails.getDescription());
+            existingBook.setDescription(bookService.getBookPrice(bookDetails));
+
             return ResponseEntity.ok(bookService.saveBook(existingBook));
         }
         
